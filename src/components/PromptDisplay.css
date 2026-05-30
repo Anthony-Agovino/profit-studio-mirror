@@ -1,0 +1,136 @@
+.pd {
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.pd__action-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.pd__action-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pd__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.pd__live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  box-shadow: 0 0 6px var(--accent-emerald);
+  animation: pd-pulse 2s ease-in-out infinite;
+}
+
+@keyframes pd-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pd__action-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pd__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.pd__btn--ghost {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.pd__btn--ghost:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.pd__btn--copy {
+  background: var(--accent-indigo);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.pd__btn--copy:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.pd__btn--copied {
+  background: var(--accent-emerald);
+}
+
+.pd__btn--copied:hover {
+  opacity: 0.88;
+}
+
+.pd__body {
+  overflow-x: auto;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.pd__pre {
+  margin: 0;
+  padding: 20px;
+  font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.pd__pre code {
+  font-family: inherit;
+}
+
+.pd__hidden-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 28px 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.pd__hidden-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.pd__hidden-msg strong {
+  color: var(--text-secondary);
+}
