@@ -1,4 +1,4 @@
- master
+import { useState } from 'react';
 import { ChevronDown, Palette } from 'lucide-react';
 import { getColorSuggestions } from '../utils/colorRecommendations';
 import './PromptBuilder.css';
@@ -23,7 +23,6 @@ function FormField({ label, children, hint }) {
 
 function PromptBuilder({ formData, onFormChange }) {
   const [advancedOpen, setAdvancedOpen] = useState(false);
- master
 
   const handleChange = (e) => {
     onFormChange(e.target.name, e.target.value);
@@ -137,7 +136,7 @@ function PromptBuilder({ formData, onFormChange }) {
             )}
           </div>
           <div className="pb-color__swatches">
-            {colorSuggestions.map(palette => (
+            {getColorSuggestions(formData.businessType).map(palette => (
               <button
                 key={palette.primary}
                 className={`pb-swatch${formData.primaryColor === palette.hex ? ' pb-swatch--active' : ''}`}
