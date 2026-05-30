@@ -2,8 +2,7 @@ import { useState } from 'react';
 import AccordionStep from './AccordionStep';
 import { STEPS } from '../utils/constants';
 
-
-import './RoadmapAccordion.css';
+master
 
 /* ─── Root component ─────────────────────────────────────────── */
 

@@ -9,7 +9,7 @@
   --bg-secondary: #111827;
   --bg-card:      #1a2035;
   --bg-hover:     #1e2845;
-  --bg-glass:     rgba(255, 255, 255, 0.04);
+  --bg-glass:     rgba(255, 255, 255, 0.1);
 
   /* Borders
    Used for borders around elements. `border-focus` is specifically used for keyboard navigation outlines.
