@@ -1,4 +1,4 @@
-master
+ master
 import { ChevronDown, Palette } from 'lucide-react';
 import { getColorSuggestions } from '../utils/colorRecommendations';
 import './PromptBuilder.css';

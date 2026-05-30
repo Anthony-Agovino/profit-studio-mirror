@@ -2,23 +2,31 @@
    DESIGN SYSTEM — CSS Custom Properties
    =================================================== */
 :root {
-  /* Backgrounds */
+  /* Backgrounds
+   These variables define the base colors for the application's background, secondary elements, cards, and hover states.
+*/
   --bg-primary:   #0a0f1e;
   --bg-secondary: #111827;
   --bg-card:      #1a2035;
   --bg-hover:     #1e2845;
   --bg-glass:     rgba(255, 255, 255, 0.1);
 
-  /* Borders */
+  /* Borders
+   Used for borders around elements. `border-focus` is specifically used for keyboard navigation outlines.
+*/
   --border:       rgba(255, 255, 255, 0.08);
   --border-focus: rgba(99, 102, 241, 0.6);
 
-  /* Text */
+  /* Text
+   Typography color variables. `text-primary` for main reading text, `text-secondary` and `muted` for less important information.
+*/
   --text-primary:   #f1f5f9;
   --text-secondary: #94a3b8;
   --text-muted:     #64748b;
 
-  /* Accents */
+  /* Accents
+   Primary brand and status colors. Used for buttons, active states, icons, and notifications.
+*/
   --accent-indigo:       #6366f1;
   --accent-indigo-light: #818cf8;
   --accent-indigo-dim:   rgba(99, 102, 241, 0.15);
@@ -28,20 +36,28 @@
   --accent-emerald-dim:  rgba(16, 185, 129, 0.15);
   --accent-youtube:      #ff0000;
 
-  /* Layout */
+  /* Layout
+   Fixed dimensions for structural components like the sidebar and header.
+*/
   --sidebar-width: 240px;
   --header-height: 60px;
 
-  /* Shape */
+  /* Shape
+   Border radius values to maintain consistent rounded corners across components.
+*/
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
   --radius-xl: 18px;
 
-  /* Typography */
+  /* Typography
+   Main font stack for the application.
+*/
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Motion */
+  /* Motion
+   Standardized animation and transition durations to ensure consistent feel.
+*/
   --transition: 0.22s ease;
   --transition-slow: 0.38s ease;
 }
