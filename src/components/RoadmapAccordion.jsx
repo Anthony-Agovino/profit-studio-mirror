@@ -223,7 +223,7 @@ function AccordionStep({ step, isOpen, onToggle, formData, onFormChange }) {
   useEffect(() => {
     if (!contentRef.current) return;
     setHeight(isOpen ? contentRef.current.scrollHeight : 0);
-  }, [isOpen]);
+  }, [isOpen, formData]);
 
   useEffect(() => {
     if (!isOpen || !contentRef.current) return;
