@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import RoadmapAccordion from './components/RoadmapAccordion';
+import { Suspense, lazy } from 'react';
+const Sidebar = lazy(() => import('./components/Sidebar'));
+const RoadmapAccordion = lazy(() => import('./components/RoadmapAccordion'));
 import './App.css';
 
 const initialFormData = {
@@ -35,10 +36,12 @@ function App() {
         onMenuToggle={() => setSidebarOpen(prev => !prev)}
       />
       <div className="app__body">
-        <Sidebar
+        <Suspense fallback={<div>Loading Sidebar...</div>}>
+          <Sidebar
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
-        />
+          />
+        </Suspense>
         {sidebarOpen && (
           <div
             className="sidebar-overlay"
@@ -47,10 +50,12 @@ function App() {
         )}
         <main className="app__main">
           <div className="app__content">
-            <RoadmapAccordion
+            <Suspense fallback={<div>Loading content...</div>}>
+              <RoadmapAccordion
               formData={formData}
               onFormChange={handleFormChange}
-            />
+              />
+            </Suspense>
           </div>
         </main>
       </div>

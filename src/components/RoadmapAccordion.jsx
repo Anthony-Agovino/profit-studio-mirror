@@ -239,6 +239,7 @@ function AccordionStep({ step, isOpen, onToggle, formData, onFormChange }) {
       <button
         className="ra__header"
         onClick={onToggle}
+        aria-controls={`step-content-${step.id}`}
         aria-expanded={isOpen}
       >
         <div className="ra__header-left">
@@ -253,6 +254,7 @@ function AccordionStep({ step, isOpen, onToggle, formData, onFormChange }) {
       </button>
 
       <div
+        id={`step-content-${step.id}`}
         className="ra__body"
         style={{ height: `${height}px` }}
         aria-hidden={!isOpen}

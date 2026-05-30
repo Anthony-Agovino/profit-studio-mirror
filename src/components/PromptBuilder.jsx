@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+master
 import { ChevronDown, Palette } from 'lucide-react';
 import { getColorSuggestions } from '../utils/colorRecommendations';
 import './PromptBuilder.css';
@@ -23,8 +23,7 @@ function FormField({ label, children, hint }) {
 
 function PromptBuilder({ formData, onFormChange }) {
   const [advancedOpen, setAdvancedOpen] = useState(false);
-  const colorSuggestions = useMemo(() => getColorSuggestions(formData.businessType), [formData.businessType]);
-
+ master
 
   const handleChange = (e) => {
     onFormChange(e.target.name, e.target.value);
