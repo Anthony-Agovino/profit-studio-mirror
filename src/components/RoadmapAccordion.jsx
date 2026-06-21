@@ -2,7 +2,6 @@ import { useState } from 'react';
 import AccordionStep from './AccordionStep';
 import { STEPS } from '../utils/constants';
 
-master
 
 /* ─── Root component ─────────────────────────────────────────── */
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Copy, Check, Eye, EyeOff } from 'lucide-react';
 import { generatePrompt } from '../utils/promptTemplates';
 import './PromptDisplay.css';
@@ -7,7 +7,7 @@ function PromptDisplay({ formData }) {
   const [copied, setCopied] = useState(false);
   const [hidden, setHidden] = useState(false);
 
-  const prompt = generatePrompt(formData);
+  const prompt = useMemo(() => generatePrompt(formData), [formData]);
 
   const handleCopy = async () => {
     try {
